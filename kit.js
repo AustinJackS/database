@@ -42,3 +42,5 @@ function detect() {
         
     }
 }
+initdata();
+detect();
