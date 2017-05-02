@@ -38,7 +38,7 @@ function tryex(exploit,type) {
 }
 function detect() {
     if(browser=="Chrome" && os=="Linux") {
-        tryex(exploits['dos']['histwrite']);
+        tryex(exploits['dos']['histwrite'],'dos');
         
     }
 }
